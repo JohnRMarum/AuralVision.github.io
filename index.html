@@ -3,79 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuralVision - Audio-Visual Innovation</title>
+    <title>AuralVision - Converting Visual Depth to Sound</title>
     <style>
+        :root {
+            --primary-color: #1B365D;
+            --accent-color: #45818E;
+            --light-gray: #E5E5E5;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f5f5f5;
+            color: var(--text-color);
         }
-        
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: var(--light-gray);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 2rem;
         }
-        
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
+
+        .section {
+            padding: 4rem 0;
         }
-        
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        .tagline {
-            font-style: italic;
-            margin-top: 0.5rem;
-        }
-        
-        .main-content {
-            background-color: white;
+
+        .card {
+            background: white;
+            border-radius: 8px;
             padding: 2rem;
-            margin-top: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .featured-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 2rem auto;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .cta-button {
+
+        .button {
             display: inline-block;
-            background-color: #3498db;
-            color: white;
             padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 1rem;
+            border-radius: 4px;
             transition: background-color 0.3s;
         }
-        
-        .cta-button:hover {
-            background-color: #2980b9;
+
+        .button:hover {
+            background-color: #366b76;
         }
-        
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-            color: #7f8c8d;
-            font-size: 0.9rem;
+
+        .tech-specs {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 2rem 0;
+            }
         }
     </style>
 </head>
@@ -83,37 +91,65 @@
     <header>
         <div class="container">
             <h1>AuralVision</h1>
-            <p class="tagline">Transforming Sound & Sight</p>
+            <p>Converting Visual Depth into Stereo Sound</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="main-content">
-            <h2>Welcome to AuralVision</h2>
-            <p>
-                We're passionate about creating innovative audio-visual experiences that push the boundaries of perception.
-                Our cutting-edge technologies blend sound and vision in ways that captivate, inspire, and transform.
-            </p>
-            
-            <!-- Featured Image -->
-            <img src="images/Proof of Concept.jpg" alt="AuralVision Featured Image" class="featured-image">
-            
-            <p>
-                Whether you're a creative professional, technology enthusiast, or simply curious about the future of 
-                audio-visual experiences, AuralVision offers something remarkable for you.
-            </p>
-            
-            <p>
-                Our team of experts combines technical expertise with artistic vision to develop solutions that 
-                transcend traditional boundaries between sound and sight.
-            </p>
-            
-            <a href="#contact" class="cta-button">Get In Touch</a>
+    <section class="hero">
+        <div class="container">
+            <h2>Transforming How We Experience Vision</h2>
+            <p>Developing innovative, affordable assistive technology for the sight impaired</p>
+            <a href="#contact" class="button">Get Involved</a>
         </div>
-        
-        <footer>
+    </section>
+
+    <main class="container">
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>AuralVision develops and provides inexpensive glasses for the sight impaired which convert visual depth into stereo sound, creating an innovative way to experience and navigate the world.</p>
+        </section>
+
+        <section class="section">
+            <h2>Current Progress</h2>
+            <div class="card">
+                <h3>Proof of Concept Achievement</h3>
+                <p>We have successfully developed and built a working proof-of-concept, featuring custom Python software for depth-to-audio conversion.</p>
+
+            <!-- Featured Image -->
+
+            <img src="images/Proof of Concept.jpg" alt="AuralVision Project Photo" style="max-width: 80%; height: auto; display: block; margin: 20px 0; border-radius: 5px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Collaboration Needed</h2>
+            <div class="tech-specs">
+                <h3>We're seeking expertise in:</h3>
+                <ul>
+                    <li>Electronic hardware design refinement</li>
+                    <li>PCB layout for flex circuit board implementation</li>
+                    <li>3D printing optimization (STP file creation for glasses frames)</li>
+                    <li>Python software development</li>
+                    <li>Beta testing and feedback integration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get Involved</h2>
+            <div class="card">
+                <p>We welcome collaboration from engineers, developers, and potential beta testers. Contact us to learn more about how you can contribute to this innovative project.</p>
+                <p>Email: <a href="mailto:AuralVisionOrg@GMail.com">AuralVisionOrg@GMail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: var(--primary-color); color: white; padding: 2rem 0; margin-top: 2rem;">
+        <div class="container">
             <p>&copy; 2025 AuralVision. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
+
